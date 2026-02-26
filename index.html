@@ -48,6 +48,87 @@ body{
   box-shadow:0 8px 20px rgba(0,0,0,0.05);
 }
 
+/* ===== 1366x768 固定 ===== */
+
+html, body{
+  margin:0;
+  padding:0;
+  background:#e9edf2;
+  height:100vh;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.container{
+  width:1366px;
+  height:768px;
+  display:flex;
+  flex-direction:column;
+  padding:25px;
+  box-sizing:border-box;
+  gap:25px;
+}
+
+/* 時計エリア */
+.clock{
+  text-align:center;
+  flex:0 0 120px;
+}
+
+#time{
+  font-size:88px;
+  font-weight:bold;
+}
+
+#date{
+  font-size:20px;
+  color:#666;
+}
+
+/* 2×2グリッド */
+.grid{
+  flex:1;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  gap:25px;
+  min-height:0;
+}
+
+.card{
+  background:white;
+  border-radius:30px;
+  padding:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+/* iframeはカードいっぱいに */
+.card iframe{
+  flex:1;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* ゲージ */
+.gauge{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:36px;
+  font-weight:bold;
+  background:conic-gradient(#2d8cff 0% 10%, #eee 10% 100%);
+}
+  
 /* ===== 天気 横並び固定 ===== */
 
 .weather-main{
@@ -176,6 +257,7 @@ updateClock();
 </body>
 
 </html>
+
 
 
 
