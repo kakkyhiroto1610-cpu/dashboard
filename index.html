@@ -188,14 +188,6 @@ html, body{
   color:#666;
 }
 
-setInterval(updateClock,1000);
-updateClock();
-
-  iframe {
-  width: 100%;
-  height: 350px;
-  border: 0;
-}  
   
 </style>
 </head>
@@ -259,6 +251,7 @@ updateClock();
 
 <script>
 /* ===== 時計 ===== */
+<script>
 function updateClock(){
   const now = new Date();
   document.getElementById("time").innerText =
@@ -268,13 +261,16 @@ function updateClock(){
     now.toLocaleDateString("ja-JP",
       {year:"numeric",month:"long",day:"numeric",weekday:"long"});
 }
-</script>
 
+setInterval(updateClock,1000);
+updateClock();
+</script>
 
   
 </body>
 
 </html>
+
 
 
 
