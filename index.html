@@ -63,12 +63,13 @@ html, body{
 }
 
 .container{
+  width:100vw;
   height:100vh;
   display:flex;
   flex-direction:column;
-  padding:20px;
+  padding:30px 40px; /* 横広げる */
   box-sizing:border-box;
-  gap:20px;
+  gap:30px;
 }
 
 /* 時計エリア */
@@ -92,8 +93,8 @@ html, body{
   flex:1;
   display:grid;
   grid-template-columns:1fr 1fr;
-  grid-template-rows:1fr 1fr;
-  gap:25px;
+  grid-template-rows:0.9fr 1.1fr; /* 下段を少し大きく */
+  gap:30px;
   min-height:0;
 }
 
@@ -268,6 +269,7 @@ updateClock();
 </body>
 
 </html>
+
 
 
 
