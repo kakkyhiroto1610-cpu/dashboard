@@ -20,7 +20,8 @@ body{
 /* 時計 */
 .clock{
   text-align:center;
-  flex:0 0 auto;
+  height:120px;   /* 高さを固定 */
+  flex-shrink:0;  /* 縮まないようにする */
 }
 
 #time{
@@ -257,6 +258,7 @@ updateClock();
 </body>
 
 </html>
+
 
 
 
