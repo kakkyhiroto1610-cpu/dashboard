@@ -188,17 +188,6 @@ html, body{
   color:#666;
 }
 
-/* ===== 時計 ===== */
-function updateClock(){
-  const now = new Date();
-  document.getElementById("time").innerText =
-    now.toLocaleTimeString("ja-JP",{hour12:false});
-
-  document.getElementById("date").innerText =
-    now.toLocaleDateString("ja-JP",
-      {year:"numeric",month:"long",day:"numeric",weekday:"long"});
-}
-
 setInterval(updateClock,1000);
 updateClock();
 
@@ -269,7 +258,16 @@ updateClock();
 </div>
 
 <script>
+/* ===== 時計 ===== */
+function updateClock(){
+  const now = new Date();
+  document.getElementById("time").innerText =
+    now.toLocaleTimeString("ja-JP",{hour12:false});
 
+  document.getElementById("date").innerText =
+    now.toLocaleDateString("ja-JP",
+      {year:"numeric",month:"long",day:"numeric",weekday:"long"});
+}
 </script>
 
 
@@ -277,6 +275,7 @@ updateClock();
 </body>
 
 </html>
+
 
 
 
