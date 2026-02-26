@@ -24,6 +24,11 @@ body{
   flex-shrink:0;  /* 縮まないようにする */
 }
 
+.clock{
+  flex:0 0 auto;
+  margin-bottom:5px;   /* 20px→5px */
+}  
+
 #time{
   font-size:32px;   /* ← 88px から下げる */
   line-height:1;
@@ -69,8 +74,10 @@ html, body{
   flex-direction:column;
   padding:20px 20px; /* 横広げる */
   box-sizing:border-box;
-  gap:30px;
+  gap:15px;
 }
+
+
 
 /* 時計エリア */
 .clock{
@@ -273,6 +280,7 @@ updateClock();
 </body>
 
 </html>
+
 
 
 
