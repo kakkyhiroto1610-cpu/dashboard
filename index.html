@@ -47,13 +47,14 @@ html, body{
   flex:1;
   display:grid;
   grid-template-columns:1fr 1fr;
-  grid-auto-rows:1fr;   /* ← ここ重要 */
+  grid-template-rows:1fr 1fr; /* 明示的に2段 */
   gap:20px;
+  min-height:0;
 }
 
 /* 今日の予定を縦2段 */
 .schedule{
-  grid-row: span 2;
+  grid-row:1 / span 2;
 }
 
 /* ===== カード ===== */
@@ -165,6 +166,7 @@ updateClock();
 
 </body>
 </html>
+
 
 
 
