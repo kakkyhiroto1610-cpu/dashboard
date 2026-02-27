@@ -162,10 +162,42 @@ function updateClock(){
 
 setInterval(updateClock,1000);
 updateClock();
+
+  <script>
+function updateClock(){
+  const now = new Date();
+  document.getElementById("time").innerText =
+    now.toLocaleTimeString("ja-JP",{hour12:false});
+
+  document.getElementById("date").innerText =
+    now.toLocaleDateString("ja-JP",
+      {year:"numeric",month:"long",day:"numeric",weekday:"long"});
+}
+
+setInterval(updateClock,1000);
+updateClock();
+
+/* ===== 0時に自動リロード ===== */
+function scheduleMidnightReload() {
+  const now = new Date();
+  const midnight = new Date();
+  midnight.setHours(24, 0, 0, 0); // 次の0時
+
+  const timeUntilMidnight = midnight - now;
+
+  setTimeout(function() {
+    location.reload();
+  }, timeUntilMidnight);
+}
+
+scheduleMidnightReload();
+  setInterval(() => location.reload(), 6 * 60 * 60 * 1000);
+</script>
 </script>
 
 </body>
 </html>
+
 
 
 
